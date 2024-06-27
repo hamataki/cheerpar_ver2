@@ -13,6 +13,7 @@
 $birth = $_POST['birth'];
 $name  = $_POST['name'];
 $email = $_POST['email'];
+$passward = $_POST["passward"];
 $other = $_POST['other'];
 
 // 好きなスポーツの取得
@@ -24,7 +25,11 @@ if (isset($_POST['sport']) && is_array($_POST['sport'])) {
 
 //2. DB接続します
 // 練習環境データベース
-
+$prod_db = "cheerpark_db_class";
+// 練習環境ホスト
+$prod_host = "localhost";
+// 練習環境ID
+$prod_id = "root";
 // 練習環境PW
 
 try {
@@ -36,8 +41,8 @@ try {
 
 //３．データ登録SQL作成
 $stmt = $pdo->prepare('INSERT INTO
-cheerpark_an_table( id, birth, name, email, sport, other, date )
-VALUES( NULL, :birth, :name, :email, :sport, :other, now() ) ');
+cheerpark_an_table( id, birth, name, email, passward, sport, other, date )
+VALUES( NULL, :birth, :name, :email, :passward, :sport, :other, now() ) ');
 
 //  2. バインド変数を用意
 // Integer 数値の場合 PDO::PARAM_INT
@@ -45,6 +50,7 @@ VALUES( NULL, :birth, :name, :email, :sport, :other, now() ) ');
 $stmt->bindValue(':birth', $birth, PDO::PARAM_STR);
 $stmt->bindValue(':name', $name, PDO::PARAM_STR);
 $stmt->bindValue(':email', $email, PDO::PARAM_STR);
+$stmt->bindValue(':passward', $email, PDO::PARAM_STR);
 $stmt->bindValue(':sport', $sport, PDO::PARAM_STR);
 $stmt->bindValue(':other', $other, PDO::PARAM_STR);
 
@@ -68,7 +74,9 @@ $email = $_POST["email"];
 $passward = $_POST["passward"];
 
 // 好きなスポーツの取得
-if (isset($_POST['sport']) && is_array($_POST['sport'])) {$sport = implode("、", $_POST["sport"]);};
+if (isset($_POST['sport']) && is_array($_POST['sport'])) {
+    $sport = implode("、", $_POST["sport"]);
+};
 $other = $_POST["other"];
 
 $str = $name.$c.$email.$c.$passward.$c.$sport.$c.$other;
