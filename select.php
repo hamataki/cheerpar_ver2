@@ -5,15 +5,23 @@ function h($str) {
 }
 
 //1.  DB接続します
+// 練習環境データベース
+$prod_db = "cheerpark_db_class";
+// 練習環境ホスト
+$prod_host = "localhost";
+// 練習環境ID
+$prod_id = "root";
+// 練習環境PW
+
 try {
     //ID:'root', Password: xamppは 空白 ''
-    $pdo = new PDO('mysql:dbname=gs_db_class;charset=utf8;host=localhost', 'root', '');
+    $pdo = new PDO('mysql:dbname=' . $prod_db . ';charset=utf8;host='. $prod_host, $prod_id, '');
 } catch (PDOException $e) {
     exit('DBConnectError:'.$e->getMessage());
 }
 
 //２．データ取得SQL作成
-$stmt = $pdo->prepare("SELECT * FROM gs_an_table");
+$stmt = $pdo->prepare("SELECT * FROM cheerpark_an_table");
 $status = $stmt->execute();
 
 //３．データ表示
@@ -28,10 +36,9 @@ if ($status==false) {
   //FETCH_ASSOC=http://php.net/manual/ja/pdostatement.fetch.php
    while($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $view .= '<p>';
-    $view .= h($result['date']) . h($result['name']) . h($result['email']) . h($result['content']);    
+    $view .= h($result['date']) . h($result['birth'])  . h($result['name']) . h($result['email']) . h($result['sport']) . h($result['other']);    
     $view .= '</p>';        
     }
-
 }
 ?>
 
