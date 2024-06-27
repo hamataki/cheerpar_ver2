@@ -36,7 +36,7 @@ if ($status==false) {
   //FETCH_ASSOC=http://php.net/manual/ja/pdostatement.fetch.php
    while($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $view .= '<p>';
-    $view .= h($result['date']) . h($result['birth'])  . h($result['name']) . h($result['email']) . h($result['sport']) . h($result['other']);    
+    $view .= h($result['date']) . h($result['birth'])  . h($result['name']) . h($result['email']) . h($result['passward']) . h($result['sport']) . h($result['other']);    
     $view .= '</p>';        
     }
 }
