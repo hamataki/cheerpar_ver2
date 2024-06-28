@@ -1,4 +1,2 @@
-aaa,test@gmal.com,ssss,サッカー、競馬,
-aaa,test@gmal.com,ssss,サッカー、競馬,
-aaa,test@gmal.com,ssss,サッカー,バレーボール
-aaa,test@gmal.com,ssss,サッカー,バレーボール
+2024-06-28,aaa,test@gmal.com,ssss,野球、ゴルフ,
+2024-06-25,aaa,test@gmal.com,ssss,野球,バレーボール

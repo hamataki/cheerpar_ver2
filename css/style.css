@@ -1,18 +1,17 @@
 body {
     color: #4a5454;
     background: radial-gradient(#ffffff, #f7f8f8);
-    min-height: 100vh;
+    min-height: 95vh;
 }
-.container{
+.cont{
     min-width: 250px;
-    max-width: 445px;
+    max-width: 650px;
     position: relative;/*←相対位置*/
     margin: 0 auto;
     text-align: center;
     box-sizing: border-box;
     /*←全て含めてmin-height:100vhに*/
 }
-
 footer {
     text-align: center;
     position: sticky;
@@ -40,7 +39,16 @@ footer {
     margin: 10px auto;
     padding: 4px;
 }
-
+.btn_group{
+    display: flex;
+}
+.next{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border-radius: 100px;
+}
 .send{
     display: flex;
     justify-content: center;
@@ -48,7 +56,13 @@ footer {
     margin-bottom: 30px;  
     border-radius: 100px;
 }
-
+.back{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border-radius: 100px;
+}
 .name{
     margin-bottom: 4px;
     text-align: center;
@@ -100,6 +114,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 0 auto;
 }
 
 .toggle {

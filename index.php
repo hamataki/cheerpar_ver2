@@ -10,18 +10,21 @@
 </head>
 <body>
     <?php include("head.html");?>
-  <div class="container">
+    <div class="cont">
     <form action="insert.php" method="post"><br>
+      <div class="question" id="question1">
         <h2 class="birth_title">生年月日を入力してください</h2>
         <input type="date" name="birth" class="birth_input" required><br>
-        
         <h2 class="name">お名前</h2>
         <input type="text" name="name" class="name_input" required><br>
         <h2 class="email">Email</h2>
         <input type="text" name="email" class="email_input" required><br>
         <h2 class="passward">パスワード</h2>
         <input type="text" name="passward" class="passward_input" required><br>
+        <button type="button" class="next">Next</button>
+        </div>
 
+        <div class="question" id="question2">
         <h2 class="sports">好きなスポーツを選んでください</h2>
         <div class="sports_group">
             <div class="container">
@@ -44,9 +47,15 @@
             その他：<input class="other_txst" type="txst" name="other">
             </div>
         </div>
+        <div class="btn_group">
+        <button type="button" class="back">Back</button>
         <button type="submit" class="send">Send</button>
+        </div>
+        </div>
     </form>
   </div>
     <footer>Copyright © 2024 CheerParK</footer>
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

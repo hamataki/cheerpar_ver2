@@ -69,6 +69,7 @@ if($status === false) {
 }
 
 $c = ",";
+$birth = $_POST["birth"];
 $name = $_POST["name"];
 $email = $_POST["email"];
 $passward = $_POST["passward"];
@@ -79,7 +80,7 @@ if (isset($_POST['sport']) && is_array($_POST['sport'])) {
 };
 $other = $_POST["other"];
 
-$str = $name.$c.$email.$c.$passward.$c.$sport.$c.$other;
+$str = $birth.$c.$name.$c.$email.$c.$passward.$c.$sport.$c.$other;
 // データをCSVファイルに書き込み
 $file = fopen("data.txt","a");
 fwrite($file,$str."\n");
