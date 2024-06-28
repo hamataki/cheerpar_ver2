@@ -7,11 +7,10 @@
     <link rel="stylesheet" href="css/style.css">
     <title>ログイン画面</title>
 
-    <!-- フォント -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada" rel="stylesheet">
 </head>
 <body>
-    <h1 class="title">CheerParK</h1>
+    <?php include("head.html");?>
+  <div class="container">
     <form action="insert.php" method="post"><br>
         <h2 class="birth_title">生年月日を入力してください</h2>
         <input type="date" name="birth" class="birth_input" required><br>
@@ -47,6 +46,7 @@
         </div>
         <button type="submit" class="send">Send</button>
     </form>
+  </div>
     <footer>Copyright © 2024 CheerParK</footer>
 </body>
 </html>

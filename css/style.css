@@ -1,15 +1,23 @@
 body {
-    min-width: 250px;
-    color: #e6ffff;
-    background: radial-gradient(#ffffff, #d0dfe4);
+    color: #4a5454;
+    background: radial-gradient(#ffffff, #f7f8f8);
     min-height: 100vh;
-    position: relative;/*←相対位置*/
-    box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
 }
+.container{
+    min-width: 250px;
+    max-width: 445px;
+    position: relative;/*←相対位置*/
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+    /*←全て含めてmin-height:100vhに*/
+}
+
 footer {
     text-align: center;
-    position: absolute;/*←絶対位置*/
-    bottom: 0;/*下に固定*/
+    position: sticky;
+    top: 100vh;
+    width: 100%;
 }
 
 .title {
@@ -101,7 +109,7 @@ footer {
     border: 3px solid #fff;
     border-radius: 100px;
     color: #fff;
-    background-color: #6a8494;
+    background-color: #84bdcb;
     box-shadow: 0 0 20px rgba(0, 0, 0, .2);
     white-space: nowrap;
     cursor: pointer;
@@ -132,7 +140,7 @@ footer {
 }
 
 .check:checked+label {
-    background-color: #ab576c;
+    background-color: #e89da1;
 }
 
 .check:checked+.toggle::before {
@@ -151,7 +159,7 @@ footer {
     border: 3px solid #fff;
     border-radius: 100px;
     color: #fff;
-    background-color: #6a8494;
+    background-color: #84bdcb;
     box-shadow: 0 0 20px rgba(0, 0, 0, .2);
     white-space: nowrap;
     cursor: pointer;
@@ -167,7 +175,7 @@ footer {
     box-shadow: 0 0 20px rgba(0, 0, 0, .6);
 }
 .other:hover {
-    background-color: #ab576c;
+    background-color: #e89da1;
 }
 
 .other_group {
@@ -176,8 +184,9 @@ footer {
 }
 
 .start {
-    margin-top: 15px;
-    margin-bottom: 4px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
     font-size: 18px;
 }
