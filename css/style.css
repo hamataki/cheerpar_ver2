@@ -1,6 +1,6 @@
 body {
     min-width: 250px;
-    color: #435757;
+    color: #e6ffff;
     background: radial-gradient(#ffffff, #d0dfe4);
     min-height: 100vh;
     position: relative;/*←相対位置*/
@@ -8,6 +8,8 @@ body {
 }
 footer {
     text-align: center;
+    position: absolute;/*←絶対位置*/
+    bottom: 0;/*下に固定*/
 }
 
 .title {
@@ -35,7 +37,8 @@ footer {
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    margin-bottom: 30px;         
+    margin-bottom: 30px;  
+    border-radius: 100px;
 }
 
 .name{
