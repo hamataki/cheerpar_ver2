@@ -48,8 +48,12 @@
             </div>
         </div>
         <div class="btn_group">
+        <div class="btn_back">
         <button type="button" class="back">Back</button>
+        </div>
+        <div class="btn_send">
         <button type="submit" class="send">Send</button>
+        </div>
         </div>
         </div>
     </form>

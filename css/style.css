@@ -41,6 +41,7 @@ footer {
 }
 .btn_group{
     display: flex;
+    justify-content: center;
 }
 .next{
     display: flex;
@@ -62,6 +63,12 @@ footer {
     margin: 0 auto;
     margin-bottom: 30px;
     border-radius: 100px;
+}
+.btn_back{
+    margin: 20px;
+}
+.btn_send {
+    margin: 20px;
 }
 .name{
     margin-bottom: 4px;
